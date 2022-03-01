@@ -5,7 +5,7 @@
             "destination": "/web-app/api"
         } , {
             "source": "/(.*)",
-            "destination": "/web-app/front-end"
+            "destination": "/web-app/front-end/public"
         }
     ]
 }
