@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "electron": "^17.1.0"
+  },
+  "name": "springhackathon",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SparkleFox715/Springhackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SparkleFox715/Springhackathon/issues"
+  },
+  "homepage": "https://github.com/SparkleFox715/Springhackathon#readme",
+  "description": ""
+}
