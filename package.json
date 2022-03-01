@@ -3,7 +3,8 @@
     "create-react-app": "^5.0.0",
     "electron": "^17.1.0",
     "react-router-dom": "^6.2.2",
-    "vercel": "^24.0.0"
+    "vercel": "^24.0.0",
+    "react": "^17.0.2"
   },
   "name": "springhackathon",
   "version": "1.0.0",
@@ -17,7 +18,7 @@
     "url": "git+https://github.com/SparkleFox715/Springhackathon.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "© | All Rights Reserved",
   "bugs": {
     "url": "https://github.com/SparkleFox715/Springhackathon/issues"
   },
