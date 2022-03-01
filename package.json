@@ -1,0 +1,23 @@
+{
+  "name": "spring-hack-a-thon-2021-ausmit-william-hackathon",
+  "version": "1.0.0",
+  "description": "[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=7172484&assignment_repo_type=AssignmentRepo)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://SparkleFox715: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@github.com/SLHSCS/spring-hack-a-thon-2021-ausmit-william-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SLHSCS/spring-hack-a-thon-2021-ausmit-william-hackathon/issues"
+  },
+  "homepage": "https://github.com/SLHSCS/spring-hack-a-thon-2021-ausmit-william-hackathon#readme",
+  "dependencies": {
+    "electron": "^17.1.0"
+  }
+}
