@@ -1,4 +1,3 @@
-
 // main.js
 
 // Modules to control application life and create native browser window
