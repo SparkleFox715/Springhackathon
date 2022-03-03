@@ -1,3 +1,4 @@
+
 // main.js
 
 // Modules to control application life and create native browser window
@@ -13,14 +14,15 @@ const createWindow = () => {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+  // hides the menu bar
+  mainWindow.setMenuBarVisibility(false);
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadURL('https://springhackathon.vercel.app')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
-
 
 
 
