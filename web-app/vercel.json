@@ -3,10 +3,10 @@
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "/web-app/api"
+            "destination": "/api"
         } , {
             "source": "/(.*)",
-            "destination": "/web-app/front-end/public"
+            "destination": "/front-end/public"
         }
     ]
 }
