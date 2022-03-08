@@ -6,32 +6,17 @@ const mongoose = require("mongoose");
 
 const bodyParser = require('body-parser');
 app.use( bodyParser.json() );   // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
-  extended : true
-})); 
+app.use( bodyParser.urlencoded( { // to support URL-encoded bodies
+  extended : true,
+} ) );
 
 // SCHEMAS >>>
 
-const QuestionsSchema = new mongoose.Schema(
-	{
-		slug : { type : String, required : true , unique : true},
-		type : { type : String, enum : ['MCQ','FRQ'], required : true },
-    group : { type : String, required : true},
-    textContent : { type : String, required : true},
-    answers : [
-      {
-        textContent : { type : String, required : true },
-        isCorrect : { type : Boolean, required : true },
-      }
-    ],
-	},
-//	{ collection: 'questions' }
-);
-QuestionsSchema.index({ slug : 1 }, { unique : true });
-const QuestionsModel = mongoose.model('Questions', QuestionsSchema);
+
 
 // <<< SCHEMAS
 
+/*
 function doDuringConnectedToMongoDB(innerFunct) {
   const options = {
     useNewUrlParser     : true,
@@ -53,7 +38,8 @@ function doDuringConnectedToMongoDB(innerFunct) {
     return innerFunct(connection, ...args);
   }
 }
-
+*/
+//
 /*
 function dataFromRequestToRecord(schema , dataInRequest) {
   let objRecord = {};
@@ -68,21 +54,18 @@ function dataFromRequestToRecord(schema , dataInRequest) {
 }
 */
 
+const options = {
+  useNewUrlParser     : true,
+//useCreateIndex      : true,
+  useUnifiedTopology  : true,
+//useFindAndModify    : false,
+};
+const CONNECTION_URI = process.env.MONGODB_URI || `mongodb://localhost:${DEV_PORT}/dev`;
+mongoose.connect(CONNECTION_URI, options);
+
 // REST API ROUTER >>>
 
-app.post('/api/question', doDuringConnectedToMongoDB((connection, req, res) => {
-  try {
-    const questionRecord = new QuestionsModel(req.body);
-    const dbRes = await questionRecord.save();
-  } catch(error) {
-    console.error(error)
-    // handle the error
-  }
-}));
-
-app.get('/api/question', doDuringConnectedToMongoDB((connection, req, res) => {
-  res.status(200).end(`GET a question ${connection}`);
-}));
+app.use(require("./routes/questionsRoutes.js"));
 
 // <<< REST API ROUTER
 
