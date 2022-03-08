@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "babel": "^6.23.0",
+    "electron-packager": "^15.4.0",
     "vercel": "^24.0.0"
   },
   "name": "springhackathon",
@@ -13,5 +15,9 @@
     "url": "https://github.com/SparkleFox715/Springhackathon/issues"
   },
   "homepage": "https://github.com/SparkleFox715/Springhackathon#readme",
-  "description": ""
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  }
 }
