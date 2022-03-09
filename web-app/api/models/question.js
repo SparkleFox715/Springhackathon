@@ -11,7 +11,7 @@ const QuestionsSchema = new mongoose.Schema(
             auto: true,
         },
 		type : { type : String, enum : ['MCQ','FRQ'], required : true },
-        group : { type : String, required : true},
+        group : { type : String, required : true}, // [subject]/[unit]
         textContent : { type : String, required : true},
         answers : [
             {
@@ -20,7 +20,7 @@ const QuestionsSchema = new mongoose.Schema(
             }
         ],
 	},
-//	{ collection: 'questions' }
+//	{ collection : 'questions' } // Mongoose makes collections by default, so this line isn't needed.
 );
 QuestionsSchema.index({ slug : 1 }, { unique : true });
 const QuestionsModel = mongoose.model('Questions', QuestionsSchema);

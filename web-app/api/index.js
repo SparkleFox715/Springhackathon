@@ -2,6 +2,7 @@
 const DEV_PORT = 3000;
 
 const app = require('express')();
+
 const mongoose = require("mongoose");
 
 const bodyParser = require('body-parser');
@@ -11,8 +12,6 @@ app.use( bodyParser.urlencoded( { // to support URL-encoded bodies
 } ) );
 
 // SCHEMAS >>>
-
-
 
 // <<< SCHEMAS
 
