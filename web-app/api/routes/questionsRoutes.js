@@ -1,24 +1,29 @@
 
 const app = require('express')();
+const errs = require('../errors');
 const QuestionsModel = require("../models/question");
 
+// POST a new question
 app.post('/api/question', async (req, res) => {
-    try {
-        const questionRecord = new QuestionsModel(req.body);
-        const dbRes = await questionRecord.save();
+    errs.tryAndCatch(async () => {
+        // TO-DO know whether or not extraneous stuff that isn't supposed to be saved gets saved
+        const questionRecord = new QuestionsModel(req.body); // TO-DO
+        const dbRes = await questionRecord.save(); // TO-DO
+
         res.status(200).end();
-    } catch(error) {
-        console.error(error);
-        response.status(500).send(error);
-    }
+    });
 });
 
-// a random question
-app.get('/api/question', async (req, res) => {
-    res.status(200).end(await QuestionsModel.find({}));
+// GET a random question
+app.get('/api/question/:group*', async (req, res) => {
+    res.status(200).end(await QuestionsModel.aggregate([
+        { $sample : {
+            size : 1 , group : req.params.group
+        } }
+    ]));
 });
 
-// a specific question
+// GET a specific question
 app.get('/api/question/:slug', async (req, res) => {
     res.status(200).end(await QuestionsModel.find({ slug : req.params.slug }));
 });
