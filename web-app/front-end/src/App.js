@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-
+import input, { Col, Container, Row } from 'react-bootstrap'
+import { Alert } from 'bootstrap';
 function App() {
   return (
-      <div className="loginpage">
-        
-      </div>
+    <Alert dismissible variant="danger">
+      <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+      <p>
+        Change this and that and try again.
+      </p>
+    </Alert>
   );
 }
 
