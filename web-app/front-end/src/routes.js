@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route } from 'react-router-dom';
 
 /**
  * Import all page components here
@@ -15,7 +15,7 @@ import Quiz from './components/Quiz/Quiz';
  */
 export default (
   <Route path="/" component={Home}>
-    {/*<IndexRoute component={MainPage} />*/}
+    {/*<IndexRoute component={Home} />*/}
     <Route path="/Admin" component={Admin} />
     <Route path="/Quiz/:group*" component={Quiz} />
   </Route>

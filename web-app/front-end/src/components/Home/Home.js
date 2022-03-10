@@ -1,7 +1,7 @@
 
 //import './Home.css';
 
-function App() {
+function HomePage() {
   return (
       <div className="loginpage">
         <h1>Home</h1>
@@ -9,8 +9,9 @@ function App() {
   );
 }
 
+ReactDOM.render(new HomePage());
 
-export default App;
+export default HomePage;
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />

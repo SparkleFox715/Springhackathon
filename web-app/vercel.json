@@ -6,7 +6,7 @@
             "destination": "/api"
         } , {
             "source": "/(.*)",
-            "destination": "/front-end/production"
+            "destination": "/front-end/build"
         }
     ]
 }
