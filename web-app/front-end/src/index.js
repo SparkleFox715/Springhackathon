@@ -12,7 +12,7 @@ import reportWebVitals from './reportWebVitals';
 //
 
 // You can choose your kind of history here (e.g. browserHistory)
-import { Route, HashRouter } from 'react-router';
+import { Router, BrowserRouter } from 'react-router-dom';
 // Your routes.js file
 import routes from './routes';
 
@@ -20,7 +20,7 @@ import routes from './routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router routes={routes} history={history} />
+    <BrowserRouter routes={routes}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
