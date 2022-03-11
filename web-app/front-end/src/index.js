@@ -20,6 +20,7 @@ import routes from './routes';
 
 ReactDOM.render(
   <React.StrictMode>
+    <h1>test</h1>
     <BrowserRouter routes={routes}/>
   </React.StrictMode>,
   document.getElementById('root')
