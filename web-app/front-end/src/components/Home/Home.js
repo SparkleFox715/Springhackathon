@@ -1,15 +1,15 @@
 
+import React from 'react';
+
 //import './Home.css';
 
-function HomePage() {
-  return (
-      <div className="loginpage">
-        <h1>Home</h1>
-      </div>
-  );
+class HomePage extends React.Component {
+  render() {
+    return <div className="loginpage">
+      <h1>Home</h1>
+    </div>;
+  }
 }
-
-ReactDOM.render(new HomePage());
 
 export default HomePage;
     // <div className="App">

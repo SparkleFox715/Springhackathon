@@ -1,9 +1,20 @@
 
 {
+    "trailingSlash": false,
+    "redirects": [
+        { 
+            "source": "/api",
+            "destination": "/",
+            "permanent": true
+        }
+    ],
     "rewrites": [
         {
             "source": "/api/(.*)",
             "destination": "/api"
+        } , {
+            "source": "/static/:files*",
+            "destination": "/front-end/build/static/:files*"
         } , {
             "source": "/(.*)",
             "destination": "/front-end/build"
