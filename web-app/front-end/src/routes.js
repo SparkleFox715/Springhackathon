@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Admin from './components/Admin/Admin';
 import Quiz from './components/Quiz/Quiz';
+import HomePage from './components/Home/Home';
 
 /**
  * All routes go here.
@@ -15,7 +16,7 @@ import Quiz from './components/Quiz/Quiz';
  */
 export default (
   <Routes>
-    <Route exact path="/" component={Home}>
+    <Route exact path="/" component={HomePage}>
       {/*<IndexRoute component={Home} />*/}
     </Route>
     <Route path="/Admin" component={Admin} />
